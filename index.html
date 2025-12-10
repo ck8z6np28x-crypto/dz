@@ -29,5 +29,14 @@ class="w-full bg-blue-500 text-white p-3 rounded-xl hover:bg-blue-600 transition
 </button>
 </form>
 </div>
+  <script>
+  const deadline = new Date("2025-12-15T23:59:59");
+  const now = new Date();
+  const form = document.querySelector("form");
+
+  if (now > deadline) {
+    form.innerHTML = "<p>Підписка закрита. Дякуємо!</p>";
+  }
+</script>
 </body>
 </html>
