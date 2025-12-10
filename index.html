@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Хочу взяти участь!</title>
+<title>I want to participate!</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
-<h1 class="text-2xl font-bold mb-4 text-center">Хочу схему!</h1>
-<p class="mb-6 text-center">Введіть свій email, щоб записатися.</p>
+<h1 class="text-2xl font-bold mb-4 text-center">I want this chart!</h1>
+<p class="mb-4 text-center">To receive this chart, please provide the email of your Fantastitch account.</p>
 
-<!-- FORM ACTION: replace YOUR_URL below with Formspree or another backend -->
+<!-- Додане повідомлення про дату відправки -->
+<p class="mb-6 text-center text-sm text-gray-600">Everyone who signed up will receive the pattern on December 15.</p>
+
+<!-- FORM ACTION -->
 <form action="https://formspree.io/f/xovgklgv" method="POST" class="space-y-4">
 <input
 type="email"
 name="email"
 required
-placeholder="Ваш email"
+placeholder="Your email"
 class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
 />
 
@@ -25,7 +28,7 @@ class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-b
 type="submit"
 class="w-full bg-blue-500 text-white p-3 rounded-xl hover:bg-blue-600 transition"
 >
-Надіслати
+Send
 </button>
 </form>
 </div>
@@ -35,7 +38,7 @@ class="w-full bg-blue-500 text-white p-3 rounded-xl hover:bg-blue-600 transition
   const form = document.querySelector("form");
 
   if (now > deadline) {
-    form.innerHTML = "<p>Підписка закрита. Дякуємо!</p>";
+    form.innerHTML = "<p class='text-center font-bold'>Subscription is closed. Thank you!</p>";
   }
 </script>
 </body>
