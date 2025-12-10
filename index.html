@@ -11,28 +11,43 @@
 <h1 class="text-2xl font-bold mb-4 text-center">I want this chart!</h1>
 <p class="mb-4 text-center">To receive this chart, please provide the email of your Fantastitch account.</p>
 
-<!-- Додане повідомлення про дату відправки -->
+<!-- Повідомлення про дату відправки -->
 <p class="mb-6 text-center text-sm text-gray-600">Everyone who signed up will receive the pattern on December 15.</p>
 
 <!-- FORM ACTION -->
 <form action="https://formspree.io/f/xovgklgv" method="POST" class="space-y-4">
-<input
-type="email"
-name="email"
-required
-placeholder="Your email"
-class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
-/>
+  <input
+    type="email"
+    name="email"
+    required
+    placeholder="Your email"
+    class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400"
+  />
 
-<button
-type="submit"
-class="w-full bg-blue-500 text-white p-3 rounded-xl hover:bg-blue-600 transition"
->
-Send
-</button>
+  <!-- Чекбокси для підтвердження підписки на Instagram -->
+  <div class="mb-4">
+    <label class="inline-flex items-center">
+      <input type="checkbox" required class="mr-2">
+      I follow <a href="https://www.instagram.com/merejkatm/" target="_blank" class="text-blue-600">@merejkatm</a>
+    </label>
+  </div>
+  <div class="mb-4">
+    <label class="inline-flex items-center">
+      <input type="checkbox" required class="mr-2">
+      I follow <a href="https://www.instagram.com/fantastitch.app/" target="_blank" class="text-blue-600">@fantastitch.app</a>
+    </label>
+  </div>
+
+  <button
+    type="submit"
+    class="w-full bg-blue-500 text-white p-3 rounded-xl hover:bg-blue-600 transition"
+  >
+    Send
+  </button>
 </form>
 </div>
-  <script>
+
+<script>
   const deadline = new Date("2025-12-15T23:59:59");
   const now = new Date();
   const form = document.querySelector("form");
